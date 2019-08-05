@@ -1,7 +1,7 @@
 <template>
   <nav>
     <v-app-bar dark app flat>
-      <v-app-bar-nav-icon @click="drawer = !drawer" class="indigo--text text--accent-2"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer" class="cyan--text text--lighten-3"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-light">vue</span>
         <span>TV</span>
