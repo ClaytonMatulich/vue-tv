@@ -28,9 +28,12 @@
     },
     methods: {
       init() {
+        const key = process.env.VUE_APP_KEY;
         axios
           .get(
-            "https://api.themoviedb.org/3/movie/now_playing?api_key=6e95d1c6cf02574f6938fc26b4c30a1a&language=en-US&page=1"
+            "https://api.themoviedb.org/3/movie/now_playing?api_key=" +
+              key +
+              "&language=en-US&page=1"
           )
           .then(response => {
             // handle success
