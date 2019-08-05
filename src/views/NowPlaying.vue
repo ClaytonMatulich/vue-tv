@@ -1,16 +1,24 @@
 <template>
   <div>
     <v-container class="my-5">
-      <h1>Now Playing</h1>
+      <h1 class="display-1">Now Playing</h1>
 
       <v-layout row wrap>
         <v-flex xs12 sm6 md4 lg3 v-for="movie in movies" :key="movie.id">
-          <v-card class="text-center ma-3">
+          <v-card class="text-center ma-3" min-height="350" max-height="450">
+            <v-img :src="imageURL + movie.backdrop_path"></v-img>
+            <v-card-title>{{movie.title}}</v-card-title>
+
+            <v-divider class="mx-4"></v-divider>
             <v-card-text>
-              <div slot="subheading">{{movie.title}}</div>
-              <div class="grey--text">{{movie.vote_average}}</div>
+              <v-progress-circular
+                size="70"
+                color="cyan lighten-3"
+                rotate="-90"
+                width="12"
+                :value="movie.vote_average * 10"
+              >{{movie.vote_average * 10}}</v-progress-circular>
             </v-card-text>
-            <v-card-actions>action</v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
@@ -23,7 +31,8 @@
   export default {
     data: function() {
       return {
-        movies: []
+        movies: [],
+        imageURL: "https://image.tmdb.org/t/p/w1280"
       };
     },
     methods: {
