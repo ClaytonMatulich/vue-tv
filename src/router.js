@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import NowPlaying from './views/NowPlaying.vue'
-import TopRated from './views/TopRated.vue';
+import MoviesPlayingNow from './views/MoviesPlayingNow.vue'
+import TopRatedMovies from './views/TopRatedMovies.vue';
 
 Vue.use(Router)
 
@@ -16,14 +16,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/nowplaying',
-      name: 'nowplaying',
-      component: NowPlaying
+      path: '/movies-playing-now',
+      name: 'moviesplayingnow',
+      component: MoviesPlayingNow
     },
     {
-      path: '/toprated',
-      name: 'toprated',
-      component: TopRated
+      path: '/top-rated-movies',
+      name: 'topratedmovies',
+      component: TopRatedMovies
     }
   ]
 })

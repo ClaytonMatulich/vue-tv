@@ -32,8 +32,16 @@
         drawer: false,
         links: [
           { icon: "mdi-home", text: "Home", route: "/" },
-          { icon: "mdi-filmstrip", text: "Now Playing", route: "/nowplaying" },
-          { icon: "mdi-medal", text: "Top Rated", route: "/toprated" }
+          {
+            icon: "mdi-filmstrip",
+            text: "Movies Playing Now",
+            route: "/movies-playing-now"
+          },
+          {
+            icon: "mdi-medal",
+            text: "Top Rated Movies",
+            route: "/top-rated-movies"
+          }
         ]
       };
     }
