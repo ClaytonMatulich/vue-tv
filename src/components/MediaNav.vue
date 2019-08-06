@@ -14,7 +14,7 @@
               v-on="on"
               small
               color="cyan lighten-3"
-              class="mx-3"
+              class="criteriaSelector mx-3 mt-3"
               @click="sortBy('popularity')"
             >
               <v-icon left>mdi-account-heart</v-icon>
@@ -30,7 +30,7 @@
               v-on="on"
               small
               color="cyan lighten-3"
-              class="mx-3"
+              class="criteriaSelector mx-3 mt-3"
               @click="sortBy('vote_average')"
             >
               <v-icon left>mdi-star</v-icon>
@@ -45,7 +45,7 @@
               v-on="on"
               small
               color="cyan lighten-3"
-              class="mx-3"
+              class="criteriaSelector mx-3 mt-3"
               @click="sortBy('release_date')"
             >
               <v-icon left>mdi-calendar</v-icon>
@@ -73,5 +73,8 @@
   };
 </script>
 
-<style>
+<style scoped>
+  .v-btn.criteriaSelector {
+    background: linear-gradient(251deg, #1f6b78, #876bdf);
+  }
 </style>

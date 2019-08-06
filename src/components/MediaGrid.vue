@@ -38,7 +38,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   .v-card:hover {
     background: linear-gradient(251deg, #1f6b78, #876bdf);
   }
