@@ -7,18 +7,18 @@
       @vote_average="sortBy('vote_average')"
       @release_date="sortBy('release_date')"
     ></movie-nav>
-    <movie-grid :movies="movies" :imageURL="imageURL"></movie-grid>
+    <media-grid :movies="movies" :imageURL="imageURL"></media-grid>
   </v-container>
 </template>
 
 <script>
   import axios from "axios";
-  import MovieGrid from "../components/MovieGrid.vue";
+  import MediaGrid from "../components/MediaGrid.vue";
   import MovieNav from "../components/MovieNav.vue";
 
   export default {
     components: {
-      movieGrid: MovieGrid,
+      mediaGrid: MediaGrid,
       movieNav: MovieNav
     },
     data: function() {
