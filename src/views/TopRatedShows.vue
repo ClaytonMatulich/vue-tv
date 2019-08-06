@@ -24,7 +24,7 @@
     data: function() {
       return {
         shows: [],
-        pageTitle: "Popular Shows",
+        pageTitle: "Top Rated Shows",
         imageURL: "https://image.tmdb.org/t/p/w1280",
         sortCriteria: "Most Popular"
       };
@@ -34,7 +34,7 @@
         const key = process.env.VUE_APP_KEY;
         axios
           .get(
-            "https://api.themoviedb.org/3/tv/popular?api_key=" +
+            "https://api.themoviedb.org/3/tv/top_rated?api_key=" +
               key +
               "&language=en-US&page=1"
           )
@@ -73,3 +73,4 @@
 
 <style>
 </style>
+

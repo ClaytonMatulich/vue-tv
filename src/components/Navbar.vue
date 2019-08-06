@@ -1,11 +1,7 @@
 <template>
   <nav>
     <v-app-bar dark app flat>
-      <v-app-bar-nav-icon
-        @click="drawer = !drawer"
-        class="cyan--text text--lighten-3"
-        style="background-color: red;"
-      ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon id="drawerIcon" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-light">vue</span>
         <span>TV</span>
@@ -38,7 +34,7 @@
             route: "/movies-playing-now"
           },
           {
-            icon: "mdi-medal",
+            icon: "mdi-trophy",
             text: "Top Rated Movies",
             route: "/top-rated-movies"
           },
@@ -46,6 +42,11 @@
             icon: "mdi-television-classic",
             text: "Popular Shows",
             route: "/popular-shows"
+          },
+          {
+            icon: "mdi-medal",
+            text: "Top Rated Shows",
+            route: "/top-rated-shows"
           }
         ]
       };
@@ -53,8 +54,11 @@
   };
 </script>
 
-<style>
+<style scoped>
   .v-navigation-drawer {
+    background: linear-gradient(251deg, #1f6b78, #876bdf);
+  }
+  #drawerIcon:hover {
     background: linear-gradient(251deg, #1f6b78, #876bdf);
   }
 </style>
