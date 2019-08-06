@@ -8,7 +8,7 @@
       @release_date="sortBy('release_date')"
     ></media-nav>
     <media-grid :movies="shows" :imageURL="imageURL"></media-grid>
-    <div class="text-center">
+    <div class="text-center" v-if="showPagination">
       <v-pagination color="indigo accent-2" v-model="page" :length="3" :value="page"></v-pagination>
     </div>
   </v-container>
@@ -31,7 +31,8 @@
         imageURL: "https://image.tmdb.org/t/p/w1280",
         sortCriteria: "Most Popular",
         sortedBy: "popularity",
-        page: 1
+        page: 1,
+        showPagination: false
       };
     },
     methods: {
@@ -56,6 +57,7 @@
           .finally(() => {
             // always executed
             this.sortBy(this.sortedBy);
+            this.showPagination = true;
           });
       },
       sortBy(prop) {
