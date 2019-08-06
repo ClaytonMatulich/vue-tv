@@ -41,6 +41,11 @@
             icon: "mdi-medal",
             text: "Top Rated Movies",
             route: "/top-rated-movies"
+          },
+          {
+            icon: "mdi-television-classic",
+            text: "Popular Shows",
+            route: "/popular-shows"
           }
         ]
       };

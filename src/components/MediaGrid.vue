@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 lg3 v-for="movie in movies" :key="movie.id">
-        <v-card hover class="ma-3" min-height="450" max-height="700">
+        <v-card hover class="ma-3" min-height="450" max-height="800">
           <v-layout
             column
             align-center
@@ -12,7 +12,7 @@
           >
             <v-img :src="imageURL + movie.backdrop_path"></v-img>
 
-            <v-card-title class="font-weight-light">{{movie.title}}</v-card-title>
+            <v-card-title class="font-weight-light">{{movie.title || movie.name}}</v-card-title>
             <v-card-text>{{movie.overview}}</v-card-text>
             <v-progress-circular
               size="90"
