@@ -106,8 +106,9 @@
           this.sortCriteria = "Most Popular";
         } else if (prop === "vote_average") {
           this.sortCriteria = "Highest Rated";
+        } else if (prop === "release_date") {
+          this.sortCriteria = "Release Date";
         }
-
         this.movies.sort((a, b) => (a[prop] > b[prop] ? -1 : 1));
       }
     },
