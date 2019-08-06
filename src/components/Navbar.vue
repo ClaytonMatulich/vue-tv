@@ -31,8 +31,9 @@
       return {
         drawer: false,
         links: [
-          { icon: "mdi-view-dashboard", text: "Home", route: "/" },
-          { icon: "mdi-filmstrip", text: "Now Playing", route: "/nowplaying" }
+          { icon: "mdi-home", text: "Home", route: "/" },
+          { icon: "mdi-filmstrip", text: "Now Playing", route: "/nowplaying" },
+          { icon: "mdi-medal", text: "Top Rated", route: "/toprated" }
         ]
       };
     }
