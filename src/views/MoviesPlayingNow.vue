@@ -1,12 +1,12 @@
 <template>
   <v-container class="my-5">
-    <movie-nav
+    <media-nav
       :pageTitle="pageTitle"
       :sortCriteria="sortCriteria"
       @popularity="sortBy('popularity')"
       @vote_average="sortBy('vote_average')"
       @release_date="sortBy('release_date')"
-    ></movie-nav>
+    ></media-nav>
     <media-grid :movies="movies" :imageURL="imageURL"></media-grid>
   </v-container>
 </template>
@@ -14,12 +14,12 @@
 <script>
   import axios from "axios";
   import MediaGrid from "../components/MediaGrid.vue";
-  import MovieNav from "../components/MovieNav.vue";
+  import MediaNav from "../components/MediaNav.vue";
 
   export default {
     components: {
       mediaGrid: MediaGrid,
-      movieNav: MovieNav
+      mediaNav: MediaNav
     },
     data: function() {
       return {
