@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import NowPlaying from './views/NowPlaying.vue'
+import TopRated from './views/TopRated.vue';
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/nowplaying',
       name: 'nowplaying',
       component: NowPlaying
+    },
+    {
+      path: '/toprated',
+      name: 'toprated',
+      component: TopRated
     }
   ]
 })
