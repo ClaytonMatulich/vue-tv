@@ -2,7 +2,7 @@
   <v-container class="my-5">
     <v-layout justify-end row class="mt-3 mr-4">
       <v-flex class="ml-5" align-self-center>
-        <h1 class="display-1 font-weight-light">Now Playing</h1>
+        <h1 class="display-1 font-weight-light">Top Rated</h1>
         <h5 class="font-weight-light">{{sortCriteria}}</h5>
       </v-flex>
       <v-spacer></v-spacer>
@@ -58,20 +58,17 @@
         </div>
       </v-flex>
     </v-layout>
-
     <movie-grid :movies="movies" :imageURL="imageURL"></movie-grid>
   </v-container>
 </template>
 
 <script>
-  import axios from "axios";
   import MovieGrid from "../components/MovieGrid.vue";
-
   export default {
     components: {
       movieGrid: MovieGrid
     },
-    data: function() {
+    data() {
       return {
         movies: [],
         imageURL: "https://image.tmdb.org/t/p/w1280",
@@ -83,7 +80,7 @@
         const key = process.env.VUE_APP_KEY;
         axios
           .get(
-            "https://api.themoviedb.org/3/movie/now_playing?api_key=" +
+            "https://api.themoviedb.org/3/movie/top_rated?api_key=" +
               key +
               "&language=en-US&page=1"
           )
@@ -118,7 +115,4 @@
 </script>
 
 <style>
-  .v-btn {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
-  }
 </style>

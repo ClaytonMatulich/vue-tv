@@ -2,12 +2,12 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 lg3 v-for="movie in movies" :key="movie.id">
-        <v-card hover class="text-center ma-3" min-height="350" max-height="450">
-          <v-layout column align-center>
+        <v-card hover class="ma-3" min-height="400" max-height="450">
+          <v-layout column align-center fill-height>
             <v-img :src="imageURL + movie.backdrop_path"></v-img>
 
             <v-card-title class="font-weight-light">{{movie.title}}</v-card-title>
-
+            <v-spacer></v-spacer>
             <v-flex>
               <v-card-text>
                 <v-progress-circular
@@ -16,7 +16,7 @@
                   rotate="-90"
                   width="8"
                   :value="movie.vote_average * 10"
-                  class="font-weight-heavy"
+                  class="font-weight-heavy align-self-end"
                 >{{movie.vote_average * 10}}</v-progress-circular>
               </v-card-text>
             </v-flex>
