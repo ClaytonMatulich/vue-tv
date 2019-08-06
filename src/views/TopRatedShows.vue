@@ -8,6 +8,9 @@
       @release_date="sortBy('release_date')"
     ></media-nav>
     <media-grid :movies="shows" :imageURL="imageURL"></media-grid>
+    <div class="text-center">
+      <v-pagination color="indigo accent-2" v-model="page" :length="3" :value="page"></v-pagination>
+    </div>
   </v-container>
 </template>
 
@@ -26,7 +29,9 @@
         shows: [],
         pageTitle: "Top Rated Shows",
         imageURL: "https://image.tmdb.org/t/p/w1280",
-        sortCriteria: "Most Popular"
+        sortCriteria: "Most Popular",
+        sortedBy: "popularity",
+        page: 1
       };
     },
     methods: {
@@ -36,7 +41,8 @@
           .get(
             "https://api.themoviedb.org/3/tv/top_rated?api_key=" +
               key +
-              "&language=en-US&page=1"
+              "&language=en-US&page=" +
+              this.page
           )
           .then(response => {
             // handle success
@@ -49,6 +55,7 @@
           })
           .finally(() => {
             // always executed
+            this.sortBy(this.sortedBy);
           });
       },
       sortBy(prop) {
@@ -62,7 +69,13 @@
           prop = "first_air_date";
           this.sortCriteria = "Release Date";
         }
+        this.sortedBy = prop;
         this.shows.sort((a, b) => (a[prop] > b[prop] ? -1 : 1));
+      }
+    },
+    watch: {
+      page: function(page) {
+        this.init();
       }
     },
     mounted() {

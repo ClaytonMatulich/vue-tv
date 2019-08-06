@@ -11,7 +11,7 @@
 
             <v-card-text>
               <v-expansion-panels>
-                <v-expansion-panel>
+                <v-expansion-panel id="synopsis">
                   <v-expansion-panel-header>Synopsis</v-expansion-panel-header>
                   <v-expansion-panel-content>{{movie.overview}}</v-expansion-panel-content>
                 </v-expansion-panel>
@@ -44,6 +44,12 @@
 
 <style scoped>
   .v-card:hover {
+    background: linear-gradient(251deg, #1f6b78, #876bdf);
+  }
+  .v-card:hover #synopsis {
+    background: #303030;
+  }
+  #synopsis {
     background: linear-gradient(251deg, #1f6b78, #876bdf);
   }
 </style>
