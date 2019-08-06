@@ -1,5 +1,12 @@
 <template>
   <v-container class="my-5">
+    <media-nav
+      :pageTitle="pageTitle"
+      :sortCriteria="sortCriteria"
+      @popularity="sortBy('popularity')"
+      @vote_average="sortBy('vote_average')"
+      @release_date="sortBy('release_date')"
+    ></media-nav>
     <media-grid :movies="shows" :imageURL="imageURL"></media-grid>
   </v-container>
 </template>
@@ -7,12 +14,12 @@
 <script>
   import axios from "axios";
   import MediaGrid from "../components/MediaGrid.vue";
-  import MovieNav from "../components/MovieNav.vue";
+  import MediaNav from "../components/MediaNav.vue";
 
   export default {
     components: {
       mediaGrid: MediaGrid,
-      movieNav: MovieNav
+      mediaNav: MediaNav
     },
     data: function() {
       return {
@@ -45,14 +52,17 @@
           });
       },
       sortBy(prop) {
+        console.log(prop);
         if (prop === "popularity") {
           this.sortCriteria = "Most Popular";
         } else if (prop === "vote_average") {
           this.sortCriteria = "Highest Rated";
         } else if (prop === "release_date") {
+          //release_date for shows is called first_air_date
+          prop = "first_air_date";
           this.sortCriteria = "Release Date";
         }
-        this.movies.sort((a, b) => (a[prop] > b[prop] ? -1 : 1));
+        this.shows.sort((a, b) => (a[prop] > b[prop] ? -1 : 1));
       }
     },
     mounted() {
