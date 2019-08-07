@@ -55,6 +55,7 @@
             console.log(error);
           })
           .finally(() => {
+            // always executed
             this.sortBy(this.sortedBy);
             this.showPagination = true;
           });
