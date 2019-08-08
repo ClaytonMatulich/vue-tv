@@ -44,13 +44,13 @@
 
 <style scoped>
   .v-card:hover {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
+    background: #536dfe;
   }
   .v-card:hover #synopsis {
     /* background: #303030; */
-    background: linear-gradient(251deg, #876bdf, #1f6b78);
+    background: #303030;
   }
   #synopsis {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
+    background: #536dfe;
   }
 </style>
