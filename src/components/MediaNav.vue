@@ -13,7 +13,7 @@
             <v-btn
               v-on="on"
               small
-              color="cyan lighten-3"
+              color="primary"
               class="criteriaSelector mx-3 mt-3"
               @click="sortBy('popularity')"
             >
@@ -29,7 +29,7 @@
             <v-btn
               v-on="on"
               small
-              color="cyan lighten-3"
+              color="primary"
               class="criteriaSelector mx-3 mt-3"
               @click="sortBy('vote_average')"
             >
@@ -44,7 +44,7 @@
             <v-btn
               v-on="on"
               small
-              color="cyan lighten-3"
+              color="primary"
               class="criteriaSelector mx-3 mt-3"
               @click="sortBy('release_date')"
             >
@@ -74,7 +74,4 @@
 </script>
 
 <style scoped>
-  .v-btn.criteriaSelector {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
-  }
 </style>

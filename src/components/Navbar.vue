@@ -2,19 +2,19 @@
   <nav>
     <v-app-bar dark app flat>
       <v-app-bar-nav-icon id="drawerIcon" @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="text-uppercase grey--text">
+      <v-toolbar-title class="text-uppercase white--text">
         <span class="font-weight-light">vue</span>
         <span>TV</span>
       </v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer app v-model="drawer">
+    <v-navigation-drawer app v-model="drawer" color="indigo accent-2">
       <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
         <v-list-item-action>
           <v-icon class="white--text">{{link.icon}}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title class="white--text font-weight-light">{{link.text}}</v-list-item-title>
+          <v-list-item-title class="white--text">{{link.text}}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-navigation-drawer>
@@ -55,10 +55,4 @@
 </script>
 
 <style scoped>
-  .v-navigation-drawer {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
-  }
-  #drawerIcon:hover {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
-  }
 </style>

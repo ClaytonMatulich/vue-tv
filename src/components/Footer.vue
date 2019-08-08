@@ -25,7 +25,4 @@
 </script>
 
 <style scoped>
-  .v-btn:hover {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
-  }
 </style>
