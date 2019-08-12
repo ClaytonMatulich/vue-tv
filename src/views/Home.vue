@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout column align-center>
+    <v-layout column align-center justify-space-between>
       <v-flex class="my-5 mx-5">
         <div class="text-center">
           <h1
