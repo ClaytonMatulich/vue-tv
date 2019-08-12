@@ -53,6 +53,11 @@
             icon: "mdi-medal",
             text: "Top Rated Shows",
             route: "/top-rated-shows"
+          },
+          {
+            icon: "mdi-information",
+            text: "About",
+            route: "/about"
           }
         ]
       };
