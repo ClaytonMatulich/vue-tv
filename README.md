@@ -1,7 +1,10 @@
 # VueTv  
 VueTV is a website that allows users to discover movies and tv shows. Filer by certain criteria, and read quick synopses about the movies and shows that interest you.  
 
-https://vuetv.netlify.com/
+https://vuetv.netlify.com/  
+
+
+![Screenshot](https://github.com/ClaytonMatulich/vue-tv/blob/master/src/assets/vuetv-screenshot.png)
 
 ## Project setup
 
