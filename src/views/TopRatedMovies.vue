@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-5">
+  <v-container>
     <media-nav
       :pageTitle="pageTitle"
       :sortCriteria="sortCriteria"
@@ -9,7 +9,7 @@
     ></media-nav>
     <media-grid :movies="movies" :imageURL="imageURL"></media-grid>
     <div class="text-center" v-if="showPagination">
-      <v-pagination color="indigo accent-2" v-model="page" :length="3" :value="page"></v-pagination>
+      <v-pagination color="primary" v-model="page" :length="3" :value="page"></v-pagination>
     </div>
   </v-container>
 </template>

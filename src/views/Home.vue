@@ -1,56 +1,25 @@
 <template>
-  <div>
-    <v-layout column align-center justify-space-between fill-height>
-      <div class="text-center">
-        <h1 id="intro" class="display-3 my-3 font-weight-thin">Discover Movies and Shows with VueTV</h1>
-      </div>
-      <v-spacer></v-spacer>
-      <v-img
-        contain
-        width="60vw"
-        height="60vh"
-        src="../assets/undraw_horror_movie.svg"
-        class="mt-2"
-      ></v-img>
+  <v-container>
+    <v-layout align-center justify-space-around column fill-height wrap class="my-5 text-center">
+      <h1
+        class="display-3 my-3 font-weight-thin white--text my-5"
+      >Discover Movies and Shows with VueTV</h1>
+
+      <v-img contain width="50vw" height="50vh" src="../assets/undraw_horror_movie.svg"></v-img>
+
+      <v-btn color="primary" min-width="200" class="my-5" router to="/movies-playing-now">Explore</v-btn>
     </v-layout>
-    <v-layout align-center row class="my-5" wrap>
-      <v-flex xs12 sm6 md3 class="text-center" v-for="link in links" :key="link.location">
-        <v-btn min-width="200" class="mx-5 my-2" router :to="link.path">{{link.location}}</v-btn>
-      </v-flex>
-    </v-layout>
-  </div>
+  </v-container>
 </template>
 
 <script>
   export default {
     components: {},
     data() {
-      return {
-        links: [
-          {
-            location: "Movies Playing Now",
-            path: "/movies-playing-now"
-          },
-          {
-            location: "Top Rated Movies",
-            path: "/top-rated-movies"
-          },
-          {
-            location: "Popular Shows",
-            path: "/popular-shows"
-          },
-          {
-            location: "Top Rated Shows",
-            path: "/top-rated-shows"
-          }
-        ]
-      };
+      return {};
     }
   };
 </script>
 
-<style scoped>
-  .v-btn {
-    background: linear-gradient(251deg, #1f6b78, #876bdf);
-  }
+<style>
 </style>

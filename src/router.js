@@ -5,6 +5,7 @@ import MoviesPlayingNow from './views/MoviesPlayingNow.vue'
 import TopRatedMovies from './views/TopRatedMovies.vue';
 import PopularShows from './views/PopularShows.vue'
 import TopRatedShows from './views/TopRatedShows.vue'
+import About from './views/About.vue'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/top-rated-shows',
       name: 'topratedshows',
       component: TopRatedShows
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About
     }
   ]
 })
