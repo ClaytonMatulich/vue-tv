@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-5">
+  <v-container>
     <media-nav
       :pageTitle="pageTitle"
       :sortCriteria="sortCriteria"
