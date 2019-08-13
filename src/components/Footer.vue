@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout align-center justify-center row fill-height>
-      <v-btn class="mx-5" fab text href="https://github.com/ClaytonMatulich" target="_blank">
+      <v-btn class="mx-5" fab text href="https://github.com/ClaytonMatulich/vue-tv" target="_blank">
         <v-icon large>mdi-github-circle</v-icon>
       </v-btn>
       <v-btn
