@@ -14,7 +14,7 @@
         <v-icon large>mdi-linkedin</v-icon>
       </v-btn>
       <v-btn class="mx-5" fab text href="mailto:clayton@matulich.dev" target="_blank">
-        <v-icon arge>mdi-at</v-icon>
+        <v-icon large>mdi-at</v-icon>
       </v-btn>
     </v-layout>
   </v-container>
